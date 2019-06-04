@@ -40,8 +40,8 @@ public class BossController {
     }
 
     @GetMapping
-    public Flux<ResponseEntity<Boss>> list() {
-        return service.findAll().map(ResponseEntity :: ok);
+    public Flux<Boss> list() {
+        return service.findAll();
     }
 
 }
